@@ -4,16 +4,20 @@ import pandas as pd
 # Create a DataFrame with SMS messages
 data = {
     'SMS': [
-        "I'm very interested in learning more about your loan options.",
-        "I need a loan for my new business venture. How can I apply?",
-        "Can you provide details on your loan interest rates?",
-        "I'm not interested in any loans at this moment.",
-        "I don't need any financial services right now."
+        # "I'm very interested in learning more about your loan options.",
+        # "I need a loan for my new business venture. How can I apply?",
+        # "Can you provide details on your loan interest rates?",
+        # "I'm not interested in any loans at this moment.",
+        # "I don't need any financial services right now."
+        "your code is 5654.",
+        "Верни пожалуйста деньги",
+        'ваш кредит одобрен в банке'
     ]
 }
 
 df = pd.DataFrame(data)
 print(df)
+print(df.shape)
 
 
 # Define the IP and port of the remote machine hosting the LLaMA model
@@ -23,6 +27,7 @@ server_url = "http://192.168.88.106:11434/api/generate"
 prompt_template = """
 # Text Classification
 # Classify the following SMS messages as 'interested' or 'not interested' in obtaining loans. 
+# Text could be in russian. 
 # Please do not write reasoning and just provide labels all in lower caps.
 
 SMS: "{}"
