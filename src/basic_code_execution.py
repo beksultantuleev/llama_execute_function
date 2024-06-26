@@ -4,9 +4,9 @@ import requests
 server_url = "http://192.168.88.106:11434/api/generate"
 
 # Define a prompt for code generation
-function_name = 'summation'
+function_name = 'prime_numbers'
 prompt = f"""
-# Write a Python function to calculate the sumation of a number from 1 to 15
+# Write a Python function to get a list of first five prime numbers
 def {function_name}():
 """
 
